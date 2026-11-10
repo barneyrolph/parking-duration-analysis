@@ -1,6 +1,6 @@
 # Parking Duration Analysis
 
-A modular refactor of `parking_duration_1.04.py`. It analyses sequential clips from one fixed camera, lets the operator draw and reuse a parking polygon, tracks COCO vehicle classes with Ultralytics YOLO, reconciles temporary or changed tracker IDs, and exports qualifying parking sessions.
+A modular Python script that analyses sequential clips from one fixed camera, lets the operator draw and reuse a parking polygon, tracks COCO vehicle classes with Ultralytics YOLO, reconciles temporary or changed tracker IDs, and exports qualifying parking sessions.
 
 ## Install
 
@@ -43,18 +43,6 @@ parking-duration --config config.json --no-display
 - `export.py`: CSV and run summary
 - `cli.py`: command-line entry point
 
-## Behaviour retained from Version 1.04
-
-- candidate stabilisation before session creation
-- same-ID recovery
-- changed-ID re-identification
-- stricter matching after long absences
-- duplicate tracker-box suppression
-- session continuity across consecutive clips
-- `present_at_start` and `present_at_end` flags
-- annotated troubleshooting video
-
-The default tracker is Ultralytics `botsort.yaml`. If Version 1.04 used a customised `parking_botsort.yaml`, place that file in the repository and set `"tracker": "parking_botsort.yaml"` in `config.json`.
 
 ## Outputs
 
@@ -67,12 +55,6 @@ python -m pip install -e .[dev]
 pytest
 ruff check .
 ```
-
-Before relying on the refactor, run Version 1.04 and this repository against the same representative clips and compare the CSV and annotated video. Tracker output can vary with Ultralytics, PyTorch and model versions, so keep the environment fixed during the comparison.
-
-## Privacy and publication
-
-Do not commit source footage, annotated footage, number plates, CSV survey outputs, model weights, local paths, credentials or the saved site polygon. Confirm employer permission and third-party licence obligations before making the repository public.
 
 ## Licence
 
