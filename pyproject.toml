@@ -1,0 +1,18 @@
+[build-system]
+requires=["setuptools>=68","wheel"]
+build-backend="setuptools.build_meta"
+[project]
+name="parking-duration-analysis"
+version="1.1.0"
+description="Estimate vehicle parking durations from sequential videos using YOLO tracking."
+readme="README.md"
+requires-python=">=3.10,<3.13"
+dependencies=["matplotlib>=3.8,<4","numpy>=1.26,<3","opencv-python>=4.8,<5","ultralytics>=8.2,<9"]
+[project.optional-dependencies]
+dev=["pytest>=8,<9","ruff>=0.8,<1"]
+[project.scripts]
+parking-duration="parking_duration.cli:main"
+[tool.setuptools.packages.find]
+where=["src"]
+[tool.pytest.ini_options]
+pythonpath=["src"]
