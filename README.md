@@ -46,7 +46,7 @@ parking-duration --config config.json --no-display
 
 ## Outputs
 
-Outputs are written under `outputs/` and include the CSV plus one annotated MP4 per input clip. The CSV preserves the Version 1.04 columns.
+Outputs are written under `outputs/` and include the CSV plus one annotated MP4 per input clip.
 
 ## Testing
 
