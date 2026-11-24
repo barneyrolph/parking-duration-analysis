@@ -1,5 +1,5 @@
 {
-  "videos": ["TLC00016.AVI", "TLC00017.AVI", "TLC00018.AVI"],
+  "videos": ["CLIP_1.AVI", "CLIP_2.AVI", "CLIP_3.AVI"],
   "model_name": "yolov8s.pt",
   "tracker": "parking_botsort.yaml",
   "confidence": 0.3,
